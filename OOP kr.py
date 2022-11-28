@@ -1,0 +1,44 @@
+# -*- coding: windows-1251 -*-
+
+
+''' ласс ¬оздушный «амок (AirCastle) Ёкземпл€р класса инициализируетс€
+   с аргументами: высота; - количество состовл€ющих облаков; - цвет.
+    ласс должен реализовывать методы: - change_height(value), может
+   уменьшитьс€ только до нул€; - сложить с числом, добавл€етс€ n
+   облаков к замку, одновременно увеличиваетс€ высота на n//5; -
+   экземпл€р класса можно вызвать с аргументов - целым числом,
+   означающим 46 прозрачность облаков; метод возвращает значение
+   видимости замка, рассчитанное по формуле: высота // прозрачность *
+   количество облаков; __str__ - возвращает строковое представление в виде:
+   The AirCastle at an altitude of meters is with clouds.
+   - экземпл€ры можно сравнивать: сначала по количеству облаков,
+   затем по высоте, затем по цвету, по алфавиту' дл€ этого нужно
+   реализовать методы сравнени€: >,<.'''
+
+
+
+
+class AirCastle():
+    def __init__(self, height, clouds, color, transparency):
+        self.height = height
+        self.clouds = clouds
+        self.color = color
+        self.transparency = 46
+
+    def change_height(self, value, n):
+        self.height = value
+        self.clouds += n
+        value = value + (n // 5)
+
+    def __str__():
+        print("The AirCastle at an altitude of meters is with clouds")
+
+    def visibility(height, transparency, clouds):
+        return ((height // transparency) * clouds)
+
+    def __gt__(self, other):
+        return self > other
+
+    def __lt__(self, other):
+        return self < other
+
